@@ -32,6 +32,11 @@ const nextConfig = {
         hostname: "localhost",
       },
       {
+        // Pet product photos used by the catalog and the home page.
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
         protocol: "https",
         hostname: "*.s3.*.amazonaws.com",
       },

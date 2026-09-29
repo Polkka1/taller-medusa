@@ -20,6 +20,63 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
+        // Lavender-tinted neutrals. They replace Tailwind's gray scale so every
+        // hard-coded gray-* class follows the pastel theme, with the same
+        // lightness steps (and so the same text contrast) as the original.
+        gray: {
+          50: "#FBF8FD",
+          100: "#F4EFF9",
+          200: "#E9E1F2",
+          300: "#D8CCE6",
+          400: "#A99BBE",
+          500: "#75698A",
+          600: "#5E5272",
+          700: "#4A3F5C",
+          800: "#372E47",
+          900: "#2A2238",
+          950: "#1E1829",
+        },
+        plum: {
+          DEFAULT: "#2F2540",
+          soft: "#574B69",
+        },
+        cream: "#FFFBF7",
+        pastel: {
+          pink: {
+            50: "#FFF4F7",
+            100: "#FFE4EC",
+            200: "#FFCBDA",
+            300: "#F9A8C2",
+            400: "#F48FB1",
+            700: "#9D2D5A",
+          },
+          lavender: {
+            100: "#F0E8FC",
+            200: "#DFD0F8",
+            300: "#C7B1F1",
+            700: "#5B3A91",
+          },
+          mint: {
+            100: "#E0F7EE",
+            200: "#BFEBD9",
+            700: "#1F6B4F",
+          },
+          peach: {
+            100: "#FFEDE2",
+            200: "#FFD6BD",
+            700: "#8A4219",
+          },
+          sky: {
+            100: "#E3F2FD",
+            200: "#C4E2F9",
+            700: "#1E5A85",
+          },
+          butter: {
+            100: "#FFF7DA",
+            200: "#FDEBAA",
+            700: "#735A0B",
+          },
+        },
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",
@@ -59,6 +116,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
+          "var(--font-nunito)",
           "Inter",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -68,6 +126,7 @@ module.exports = {
           "Ubuntu",
           "sans-serif",
         ],
+        display: ["var(--font-fredoka)", "var(--font-nunito)", "sans-serif"],
       },
       keyframes: {
         ring: {

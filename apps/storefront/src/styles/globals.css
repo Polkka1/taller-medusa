@@ -2,6 +2,61 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/*
+ * Pastel theme. Overrides the light tokens from @medusajs/ui-preset, which
+ * back every ui-* utility (text-ui-fg-base, bg-ui-bg-subtle, ...). Text colors
+ * are deep plum so they stay readable (WCAG AA or better) on the pastel
+ * backgrounds.
+ */
+:root {
+  --bg-base: #fffdfb;
+  --bg-base-hover: #fbf5fd;
+  --bg-base-pressed: #f4eff9;
+  --bg-subtle: #f7f1fc;
+  --bg-subtle-hover: #f1e8fa;
+  --bg-subtle-pressed: #e9e1f2;
+  --bg-component: #fbf7fe;
+  --bg-component-hover: #f4eff9;
+  --bg-component-pressed: #e9e1f2;
+  --bg-field: #fffdfb;
+  --bg-field-hover: #fbf7fe;
+  --bg-field-component: #ffffff;
+  --bg-field-component-hover: #fbf7fe;
+  --bg-highlight: #fff4f7;
+  --bg-highlight-hover: #ffe4ec;
+  --bg-interactive: #8b6cc7;
+  --bg-disabled: #f4eff9;
+
+  --fg-base: #2f2540;
+  --fg-subtle: #574b69;
+  --fg-muted: #6f6384;
+  --fg-disabled: #a99bbe;
+  --fg-interactive: #7446ad;
+  --fg-interactive-hover: #5b3a91;
+  --fg-error: #b42350;
+
+  --border-base: #eadff2;
+  --border-strong: #d8cce6;
+  --border-interactive: #a688db;
+  --border-error: #e0527f;
+
+  --contrast-bg-base: #2f2540;
+}
+
+html {
+  background-color: #fffbf7;
+}
+
+body {
+  background-color: #fffbf7;
+  color: var(--fg-base);
+}
+
+::selection {
+  background-color: #ffcbda;
+  color: #2f2540;
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -35,9 +90,9 @@
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-    border: 1px solid #212121;
-    -webkit-text-fill-color: #212121;
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    border: 1px solid #d8cce6;
+    -webkit-text-fill-color: #2f2540;
+    -webkit-box-shadow: 0 0 0px 1000px #fbf7fe inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 
@@ -55,7 +110,7 @@
   }
 
   .contrast-btn {
-    @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+    @apply px-4 py-2 border border-plum rounded-full hover:bg-pastel-pink-200 transition-colors duration-200 ease-in;
   }
 
   .text-xsmall-regular {

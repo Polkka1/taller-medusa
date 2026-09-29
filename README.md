@@ -94,6 +94,21 @@ cd apps/backend
 pnpm medusa exec ./src/scripts/complete-cafe-de-loja.ts
 ```
 
+## Tienda de mascotas (Huellitas)
+
+`apps/backend/src/scripts/seed-pet-store.ts` convierte la tienda en **Huellitas**, una tienda de mascotas. Es idempotente y hace lo siguiente:
+
+- Crea las categorías **Comida**, **Arena para gatos**, **Camas** y **Juguetes**, y las colecciones **Mundo perruno** y **Rincón gatuno**.
+- Crea 15 productos con variantes (peso, tamaño o presentación), precios en USD y EUR, fotos de Unsplash y 100 unidades de stock por variante.
+- Pasa a borrador los productos de ropa del starter y "Cafe de loja", y desactiva las categorías de ropa. No borra nada: se pueden reactivar desde el Admin.
+
+```bash
+cd apps/backend
+pnpm medusa exec ./src/scripts/seed-pet-store.ts
+```
+
+El storefront guarda en caché las categorías y colecciones. Si no ves los cambios, detén el storefront, borra `apps/storefront/.next/cache/fetch-cache` y vuelve a levantarlo.
+
 ## Verificar una compra en Supabase
 
 1. Compra en `http://localhost:8000/ec` (el pago por defecto es manual).

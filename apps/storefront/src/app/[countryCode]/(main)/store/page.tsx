@@ -5,8 +5,8 @@ import { getRegion } from "@lib/data/regions"
 import StoreTemplate from "@modules/store/templates"
 
 export const metadata: Metadata = {
-  title: "Store",
-  description: "Explore all of our products.",
+  title: "Todos los productos",
+  description: "Explora todo lo que tenemos para tu mascota.",
 }
 
 export default async function StorePage(props: {
